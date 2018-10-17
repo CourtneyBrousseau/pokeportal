@@ -4,7 +4,8 @@ The first error was thrown because the database had not been migrated (so I ran 
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
 In the index method in the home_controller, it selects a random trainerless pokemon from the Pokemon in the database. In the index view, it displays this Pokemon.
 
-# Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
+# Question 2: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
+This line creates a button that, when clicked, makes a PATCH request to the capture_path (which corresponds to pokemons#capture in routes.rb) with a parameter id that is the wild Pokemon's id.
 
 # Question 3: What would you name your own Pokemon?
 
