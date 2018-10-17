@@ -1,4 +1,5 @@
 # Q0: Why are these two errors being thrown?
+The first error was thrown because the database had not been migrated (so I ran rails db:migrate which has to be run every time the database schema is changed). The second error was thrown because the Pokemon Controller doesn't exist yet but it's referenced in the starter code.
 
 # Q1: How are the random Pokemon appearing? What is the common factor between all the possible Pokemon that appear? *
 
