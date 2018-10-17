@@ -2,7 +2,7 @@
 <p>Name: <%= @trainer.name if @trainer.name %></p>
 <p>Email: <%= @trainer.email if @trainer.email %></p>
 <% @trainer.pokemons.each do |pokemon| %>
-	<%= image_tag("pokemon/#{@pokemon.ndex}.png", alt: "pokemon") %>
-	<p><%= @pokemon.name %></p>
-	<p><%= @pokemon.level %></p>
+	<%= image_tag("pokemon/#{pokemon.ndex}.png", alt: "pokemon") %>
+	<p>Name: <%= pokemon.name %></p>
+	<p>Level: <%= pokemon.level %></p>
 <% end %>
