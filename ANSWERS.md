@@ -18,3 +18,4 @@ The damage method redirects to trainer_path and it requires the id for that poke
 # Give us feedback on the project and decal below!
 
 # Extra credit: Link your Heroku deployed app
+Heroku: https://courtneyspokeportal.herokuapp.com/

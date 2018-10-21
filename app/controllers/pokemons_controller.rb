@@ -14,4 +14,8 @@ class PokemonsController < ApplicationController
 		end
 		redirect_to trainer_path(@trainer)
 	end
+
+	def new
+
+	end
 end
