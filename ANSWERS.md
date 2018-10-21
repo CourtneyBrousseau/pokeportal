@@ -8,8 +8,10 @@ In the index method in the home_controller, it selects a random trainerless poke
 This line creates a button that, when clicked, makes a PATCH request to the capture_path (which corresponds to pokemons#capture in routes.rb) with a parameter id that is the wild Pokemon's id.
 
 # Question 3: What would you name your own Pokemon?
+Michael Scott
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
