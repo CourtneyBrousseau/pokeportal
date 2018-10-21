@@ -8,4 +8,5 @@
 		Level: <%= pokemon.level %></br>
 		Health: <%= pokemon.health %>
 	</p>
+	<%= button_to "Damage!", damage_path(id: pokemon.id), :class => "button medium", :method => :patch %>
 <% end %>
