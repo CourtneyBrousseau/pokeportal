@@ -7,10 +7,11 @@ class PokemonsController < ApplicationController
 
 	def damage
 		@pokemon = Pokemon.find(params[:id])
+		@trainer = @pokemon.trainer
 		@pokemon.update(health: @pokemon.health - 10)
 		if @pokemon.health <= 0
 			@pokemon.destroy
 		end
-		redirect_to trainer_path(id: current_trainer)
+		redirect_to trainer_path(@trainer)
 	end
 end
