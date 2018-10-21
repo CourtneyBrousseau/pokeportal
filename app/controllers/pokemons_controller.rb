@@ -16,6 +16,6 @@ class PokemonsController < ApplicationController
 	end
 
 	def new
-
+		@pokemon = Pokemon.new
 	end
 end

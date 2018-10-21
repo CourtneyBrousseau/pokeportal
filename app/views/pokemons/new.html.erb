@@ -1,5 +1,5 @@
-<%= simple_form_for @pokemons do |f| %>
+<%= simple_form_for @pokemon, :url => root_path do |f| %>
   <%= f.input :name %>
   <%= f.input :ndex %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "create-pokemon-btn" %>
 <% end %>
