@@ -20,9 +20,7 @@ class PokemonsController < ApplicationController
 	end
 
 	def create
-    	@pokemon = Pokemon.new
-    	@pokemon.name = params[:name]
-    	@pokemon.ndex = params[:ndex]
+    	@pokemon = Pokemon.new(pokemon_params)
     	@pokemon.trainer = current_trainer
     	@pokemon.health = 100
     	@pokemon.level = 1
@@ -30,8 +28,7 @@ class PokemonsController < ApplicationController
     	redirect_to trainer_path(current_trainer)
   	end
 
-  	private
-    def pokemon_params
-    	params.permit(:name, :ndex)
-    end
+	def pokemon_params
+		params.require(:pokemon).permit(:name, :ndex)	
+	end
 end
