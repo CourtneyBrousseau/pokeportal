@@ -24,8 +24,11 @@ class PokemonsController < ApplicationController
     	@pokemon.trainer = current_trainer
     	@pokemon.health = 100
     	@pokemon.level = 1
-    	@pokemon.save
-    	redirect_to trainer_path(current_trainer)
+    	if @pokemon.save
+    		redirect_to trainer_path(current_trainer)
+    	else
+    		redirect_to pokemons_new_path
+    	end
   	end
 
 	def pokemon_params
