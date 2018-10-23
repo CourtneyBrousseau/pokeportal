@@ -14,8 +14,10 @@ Michael Scott
 The damage method redirects to trainer_path and it requires the id for that pokemon's trainer to redirect back to that trainer's page.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+Setting the flash[:error] adds an error to the rendering of the application.html.erb (which is a template that each page is based off of). When the form gets rendered after the redirect, it now includes that error as a flash alert to the user. Additionally, the error is specific (about whether a name was not specified or the name was already taken) because it uses the error(s) from trying to save the @pokemon which are put into @pokemon.errors after the save fails.
 
 # Give us feedback on the project and decal below!
 
 # Extra credit: Link your Heroku deployed app
+Github: https://github.com/CourtneyBrousseau/pokeportal
 Heroku: https://courtneyspokeportal.herokuapp.com/
